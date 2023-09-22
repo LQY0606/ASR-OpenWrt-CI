@@ -14,4 +14,7 @@ git clone --depth=1 --single-branch https://github.com/gngpp/luci-app-design-con
 #unblockneteasemusic
 #git clone --depth=1 --single-branch --branch $(echo $OpenWrt_URL | grep -iEq "lede|padavanonly" && echo "master" || echo "js") https://github.com/UnblockNeteaseMusic/luci-app-unblockneteasemusic.git
 #alist
-#git clone --depth=1 --single-branch --branch "master" https://github.com/sbwml/luci-app-alist
+#git clone --depth=1 --single-branch --branch "master" https://github.com/sbwml/luci-app-alist.git
+
+#lucky
+git clone --depth=1 --single-branch --branch "main" https://github.com/gdy666/luci-app-lucky.git
