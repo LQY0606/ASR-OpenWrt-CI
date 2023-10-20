@@ -12,6 +12,11 @@ sed -i "s/hostname='.*'/hostname='$OpenWrt_NAME'/g" ./package/base-files/files/b
 #修改默认时区
 sed -i "s/timezone='.*'/timezone='CST-8'/g" ./package/base-files/files/bin/config_generate
 sed -i "/timezone='.*'/a\\\t\t\set system.@system[-1].zonename='Asia/Shanghai'" ./package/base-files/files/bin/config_generate
+#更新golang和passwall
+rm -rf feeds/luci/applications/luci-app-passwall
+rm -rf feeds/packages/lang/golang
+  git clone https://github.com/sbwml/packages_lang_golang -b 20.x feeds/packages/lang/golang
+
 #根据源码来修改
 if [[ $OpenWrt_URL == *"lede"* ]] ; then
   #修改默认时间格式
@@ -30,11 +35,6 @@ if [[ $OpenWrt_TARGET == *"rax3000m-emmc-52Mhz"* ]] ; then
 fi
 
 << EOF
-#golang
-if [[ $OpenWrt_TARGET == *"immortalwrt-hanwckf"* ]] ; then
-  rm -rf feeds/packages/lang/golang
-  git clone https://github.com/sbwml/packages_lang_golang -b 20.x feeds/packages/lang/golang
-  rm -rf feeds/luci/applications/luci-app-passwall
-  
+
 fi
 EOF
