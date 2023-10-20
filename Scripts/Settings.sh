@@ -17,6 +17,12 @@ if [[ $OpenWrt_URL == *"lede"* ]] ; then
   #修改默认时间格式
   sed -i 's/os.date()/os.date("%Y-%m-%d %H:%M:%S %A")/g' $(find ./package/*/autocore/files/ -type f -name "index.htm")
 fi
+<< EOF
+#设置频率(cmcc 3000m-emmc如需切换为52Mhz,请删除紧邻此项的<< EOF 及EOF)
+if [[ $OpenWrt_TARGET == *"immortalwrt-hanwckf"* ]] ; then
+  sed -i 's/max-frequency = <26000000>;/max-frequency = <52000000>;/g' ./target/linux/mediatek/files-5.4/arch/arm64/boot/dts/mediatek/mt7981-cmcc-rax3000m-emmc.dts
+fi
+EOF
 
 #设置频率
 if [[ $OpenWrt_TARGET == *"rax3000m-emmc-52Mhz"* ]] ; then
