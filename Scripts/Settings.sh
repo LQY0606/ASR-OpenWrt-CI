@@ -31,7 +31,7 @@ fi
 
 << EOF
 #golang
-if [[ $OpenWrt_TARGET == *"abt_asr3000"* ]] ; then
+if [[ $OpenWrt_TARGET == *"immortalwrt-hanwckf"* ]] ; then
   rm -rf feeds/packages/lang/golang
   git clone https://github.com/sbwml/packages_lang_golang -b 20.x feeds/packages/lang/golang
   rm -rf feeds/luci/applications/luci-app-passwall
