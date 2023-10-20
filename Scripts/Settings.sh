@@ -4,7 +4,7 @@
 #rm -rf $(find ./feeds/luci/ -type d -regex ".*\(alist\).*")
 #rm -rf $(find ./feeds/packages/ -type d -regex ".*\(alist\).*")
 #修改默认主题
-sed -i "s/luci-theme-bootstrap/luci-theme-$OpenWrt_THEME/g" $(find ./feeds/luci/collections/ -type f -name "Makefile")
+#sed -i "s/luci-theme-bootstrap/luci-theme-$OpenWrt_THEME/g" $(find ./feeds/luci/collections/ -type f -name "Makefile")
 #修改默认IP地址
 sed -i "s/192\.168\.[0-9]*\.[0-9]*/$OpenWrt_IP/g" ./package/base-files/files/bin/config_generate
 #修改默认主机名
@@ -31,7 +31,7 @@ fi
 
 << EOF
 #golang
-if [[ $OpenWrt_TARGET == *"rax3000m-emmc"* ]] ; then
+if [[ $OpenWrt_TARGET == *"asr3000"* ]] ; then
   rm -rf feeds/packages/lang/golang
   git clone https://github.com/sbwml/packages_lang_golang -b 20.x feeds/packages/lang/golang
 fi
