@@ -5,6 +5,7 @@ if [[ $uboot_TARGET == *"u-boot-20220606"* ]] ; then
   sed -i 's/UBOOT_DIR=uboot-mtk-20230718-09eda825/#UBOOT_DIR=uboot-mtk-20230718-09eda825/g' ./build.sh
 fi
 SOC=mt7981 BOARD=360t7 ./build.sh
+SOC=mt7981 BOARD=abt_asr3000 ./build.sh
 SOC=mt7981 BOARD=cetron_ct3003 ./build.sh
 SOC=mt7981 BOARD=clt_r30b1 ./build.sh
 SOC=mt7981 BOARD=clt_r30b1 MULTI_LAYOUT=1 ./build.sh
