@@ -18,3 +18,4 @@
 
 #lucky
 #git clone --depth=1 --single-branch --branch "main" https://github.com/gdy666/luci-app-lucky.git
+git clone --depth=1 --single-branch --branch "main" https://github.com/xiaorouji/openwrt-passwall.git
