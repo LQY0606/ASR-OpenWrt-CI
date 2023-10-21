@@ -13,10 +13,11 @@ sed -i "s/hostname='.*'/hostname='$OpenWrt_NAME'/g" ./package/base-files/files/b
 sed -i "s/timezone='.*'/timezone='CST-8'/g" ./package/base-files/files/bin/config_generate
 sed -i "/timezone='.*'/a\\\t\t\set system.@system[-1].zonename='Asia/Shanghai'" ./package/base-files/files/bin/config_generate
 #更新golang和passwall
+rm -rf package/network/utils/iptables
 rm -rf feeds/luci/applications/luci-app-passwall
 rm -rf feeds/packages/lang/golang
   git clone https://github.com/sbwml/packages_lang_golang -b 20.x feeds/packages/lang/golang
-
+  git clone https://github.com/LQY0606/iptables-mod-socket -b main package/network/utils/iptables
 #根据源码来修改
 if [[ $OpenWrt_URL == *"lede"* ]] ; then
   #修改默认时间格式
