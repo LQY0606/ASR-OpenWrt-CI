@@ -16,7 +16,7 @@ sed -i "/timezone='.*'/a\\\t\t\set system.@system[-1].zonename='Asia/Shanghai'" 
 #rm -rf package/network/utils/iptables
 rm -rf feeds/luci/applications/luci-app-passwall
 rm -rf feeds/packages/lang/golang
-  git clone https://github.com/sbwml/packages_lang_golang -b 20.x feeds/packages/lang/golang
+  git clone https://github.com/sbwml/packages_lang_golang -b 21.x feeds/packages/lang/golang
   #git clone https://github.com/LQY0606/iptables-mod-socket -b main package/network/utils/iptables
 #根据源码来修改
 if [[ $OpenWrt_URL == *"lede"* ]] ; then
