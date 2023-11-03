@@ -21,3 +21,4 @@
 #git clone --depth=1 --single-branch --branch "luci-smartdns-dev" https://github.com/xiaorouji/openwrt-passwall.git
 git clone --depth=1 --single-branch --branch "main" https://github.com/xiaorouji/openwrt-passwall.git
 git clone --depth=1 --single-branch --branch "main" https://github.com/xiaorouji/openwrt-passwall-packages.git
+git clone -b js --depth 1 https://github.com/gngpp/luci-theme-design.git
