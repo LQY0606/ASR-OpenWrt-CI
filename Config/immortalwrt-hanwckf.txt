@@ -35,8 +35,8 @@ CONFIG_TARGET_mediatek_mt7981_DEVICE_imou_lc-hx3001=n
 #theme
 #CONFIG_PACKAGE_luci-app-argon-config=y
 #CONFIG_PACKAGE_luci-theme-argon=y
-#CONFIG_PACKAGE_luci-theme-design=n
-#CONFIG_PACKAGE_luci-app-design-config=n
+CONFIG_PACKAGE_luci-theme-design=y
+CONFIG_PACKAGE_luci-app-design-config=y
 #app
 CONFIG_PACKAGE_luci-app-upnp=y
 #CONFIG_PACKAGE_luci-app-diskman=y
